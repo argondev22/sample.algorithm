@@ -58,7 +58,7 @@ function transition(status: STATUS, input: string): STATUS {
 }
 
 async function main() {
-    const input = await getInputFromStdin("ビット列を入力してください（0と1のみ）:")
+    const input = await getInputFromStdin("ビット列を入力してください（0と1のみ）: ")
 
     let status = INIT_STATUS
     for (const i of input) {
