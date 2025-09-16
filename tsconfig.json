@@ -12,11 +12,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "types": ["node"]
   },
   "include": [
     "src/**/*"
-  ],
+, "utils/input_from_stdin.ts"  ],
   "exclude": [
     "node_modules",
     "dist"
