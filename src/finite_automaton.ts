@@ -71,7 +71,7 @@ async function main() {
   );
 
   for (const i of input) {
-    if (INPUT.includes(Number(i))) {
+    if (!INPUT.includes(Number(i))) {
       console.error("入力は0か1のみです");
       return;
     }
@@ -80,10 +80,8 @@ async function main() {
   const finalStatus = finiteAutomaton(input);
 
   console.table({
-    最終状態: `STATUS.${STATUS[finalStatus]}`,
-    受理状態集合: `[STATUS.${FINAL_STATUS.map((s) => STATUS[s]).join(
-      ", STATUS."
-    )}]`,
+    最終状態: `${STATUS[finalStatus]}`,
+    受理状態集合: `[${FINAL_STATUS.map((s) => STATUS[s]).join(", ")}]`,
     条件: "0を奇数個含んで1で終わる",
     判定結果: FINAL_STATUS.includes(finalStatus) ? "受理" : "不受理",
   });
