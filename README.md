@@ -48,5 +48,5 @@
 
 4. **Start the development environment**
    ```bash
-   make run
+   make up
    ```
