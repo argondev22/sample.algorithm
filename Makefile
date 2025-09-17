@@ -11,3 +11,4 @@ up:
 
 run:
 	@ts-node $(F)
+
