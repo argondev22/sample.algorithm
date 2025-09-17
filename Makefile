@@ -1,4 +1,6 @@
-.PHONY: init up
+.PHONY: init up run
+
+F ?= src/finite_automaton.ts
 
 init:
 	@chmod +x ./bin/init-project.sh
@@ -6,3 +8,6 @@ init:
 
 up:
 	@npm install
+
+run:
+	@ts-node $(F)
